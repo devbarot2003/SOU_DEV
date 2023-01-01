@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			
+				$("#subm").click(function(){
+				
+				var txt = $("#mail_submit").text();
+				console.log(txt);
+				
+				});
+				$("#cancel_").click(function(){
+				 $("#mail_submit").text("pqr@gmail.com");
+				
+				});
+				$("#name_").blur(function(){
+				
+				$(this).css("background-color","lightblue");
+				
+				});
+				$("#name_").focus(function(){
+				
+				$(this).css("background-color","yellow");
+				
+				});
+			});
+		</script>
+	</head>
+	<body>
+			Name: 
+			<input id="name_" type="text" placeholder="Enter name" maxlength="25"></input>
+		<p id="mail_submit">
+			email:xyz@gmail.com
+		</p>
+		<input type="checkbox" id="chbox" name="confirm">
+			I, Confirm
+		</input><br>
+		<button id="subm">
+			SUBMIT
+		</button>
+		<span><button id="cancel_">
+			CANCEL
+		</button>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title> Table creation</title>
+	</head>
+	<style>
+	table,th,td{
+		border:1px solid red;
+	}
+	</style>
+	<body>
+		<table style= "width:100%">
+			<tr>
+				<th>Company</th>
+				<th>Contact</th>
+				<th>Country</th>
+			</tr>
+			<tr>
+				<td>MD Technologies</td>
+				<td>1234567890</td>
+				<td>Kazakhistan</td>
+			</tr>
+			<tr>
+				<td>NM chocolates</td>
+				<td>9876543210</td>
+				<td>Pakistan</td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			
+				$("#show").attr('disabled',true);
+			
+				$("#hide").click(function(){
+					$(this).attr('disabled',true);
+					$("#show").attr('disabled',false);
+					$("#toggle").text("Show");
+					$("#div_box").hide(1000);
+				});
+
+				$("#show").click(function(){
+					$(this).attr('disabled',true);
+					$("#hide").attr('disabled',false);
+					$("#toggle").text("Hide");
+					$("#div_box").show(1000);
+				});
+				
+				$("#toggle").click(function(){
+					if($(this).text()=="Hide"){
+						$("#toggle").text("Show");
+						$("#div_box").hide(1000);
+						$("#hide").attr('disabled',true);
+						$("#show").attr('disabled',false);
+					}
+					else{
+						$("#toggle").text("Hide");
+						$("#div_box").show(1000);
+						$("#hide").attr('disabled',false);
+						$("#show").attr('disabled',true);
+						$("show").attr('disabled',false);
+						}
+				});
+				
+				$("#plus").click(function(){
+					$("#div_box").css("height","400px");
+					$("#div_box").css("width","400px");
+				});
+				$("#minus").click(function(){
+					$("#div_box").css("height","300px");
+					$("#div_box").css("width","300px");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id= "div_box" style="height:300px; width:300px; background-color:yellow">div</div>
+		<button id= "hide">hide</button>
+		<button id= "show">show</button>
+		<button id="toggle">toogle</button>
+		<button id="plus">+</button>
+		<button id="minus">-</button>
+	</body>
+</html>
